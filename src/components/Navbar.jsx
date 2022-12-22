@@ -4,6 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Badge from "@mui/material/Badge";
 import { mobile } from "../responsive";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
@@ -80,14 +81,31 @@ const Navbar = () => {
           </SearchContainer>
         </Left>
         <Center>
-          <Logo>hAln.</Logo>
+          <Logo>
+            <Link to="/">{"< h-aln >"}</Link>
+          </Logo>
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          <MenuItem>
+            <Link to="/register">REGISTER</Link>
+          </MenuItem>
+          <MenuItem>
+            <Link to="/login">SIGN IN</Link>
+          </MenuItem>
+
+          <MenuItem>
+            <Link to="/categories">CATEGORIES</Link>
+          </MenuItem>
+
+          <MenuItem>
+            <Link to="/productlist">PRODUCTS</Link>
+          </MenuItem>
+
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <ShoppingCartOutlinedIcon />
+              <Link to="/cart">
+                <ShoppingCartOutlinedIcon />{" "}
+              </Link>
             </Badge>
           </MenuItem>
         </Right>

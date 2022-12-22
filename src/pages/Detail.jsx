@@ -118,8 +118,8 @@ const Button = styled.button`
 const Detail = () => {
   return (
     <Container>
-      <Navbar />
-      <Announcement />
+      {/* <Navbar /> */}
+      {/* <Announcement /> */}
 
       <Wrapper>
         <ImgContainer>
@@ -163,8 +163,8 @@ const Detail = () => {
         </InfoContainer>
       </Wrapper>
 
-      <Newsletter />
-      <Footer />
+      {/* <Newsletter /> */}
+      {/* <Footer /> */}
     </Container>
   );
 };

@@ -40,8 +40,8 @@ const Option = styled.option``;
 const ProductList = () => {
   return (
     <Container>
-      <Navbar />
-      <Announcement />
+      {/* <Navbar /> */}
+      {/* <Announcement /> */}
       <Title>Dresses</Title>
       <FilterContainer>
         <Filter>
@@ -80,8 +80,8 @@ const ProductList = () => {
         </Filter>
       </FilterContainer>
       <Products />
-      <Newsletter />
-      <Footer />
+      {/* <Newsletter /> */}
+      {/* <Footer /> */}
     </Container>
   );
 };
