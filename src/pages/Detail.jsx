@@ -1,8 +1,4 @@
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
-import Newsletter from "../components/Newsletter";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import { mobile } from "../responsive";
@@ -118,9 +114,6 @@ const Button = styled.button`
 const Detail = () => {
   return (
     <Container>
-      {/* <Navbar /> */}
-      {/* <Announcement /> */}
-
       <Wrapper>
         <ImgContainer>
           <Image src="https://i.ibb.co/S6qMxwr/jean.jpg" />
@@ -162,9 +155,6 @@ const Detail = () => {
           </AddContainer>
         </InfoContainer>
       </Wrapper>
-
-      {/* <Newsletter /> */}
-      {/* <Footer /> */}
     </Container>
   );
 };

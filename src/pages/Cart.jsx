@@ -1,7 +1,4 @@
 import styled from "styled-components";
-import Announcement from "../components/Announcement";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import { mobile } from "../responsive";
@@ -157,8 +154,6 @@ const Button = styled.button`
 const Cart = () => {
   return (
     <Container>
-      {/* <Navbar /> */}
-      {/* <Announcement /> */}
       <Wrapper>
         <Title>YOUR BAG</Title>
         <Top>
@@ -245,7 +240,6 @@ const Cart = () => {
           </Summary>
         </Bottom>
       </Wrapper>
-      {/* <Footer /> */}
     </Container>
   );
 };
