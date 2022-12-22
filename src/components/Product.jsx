@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import { useNavigate } from "react-router-dom";
 
 const Info = styled.div`
   opacity: 0;
@@ -25,6 +26,7 @@ const Container = styled.div`
   min-width: 280px;
   height: 350px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #f5fbfd;
@@ -65,25 +67,45 @@ const Icon = styled.div`
   }
 `;
 
+const PriceInfo = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+`;
+
+const Title = styled.h1`
+  font-size: 20px;
+  color: #439fc5;
+  margin-right: 20px;
+`;
+
+const Price = styled.h2`
+  font-size: 20px;
+  color: #b12704;
+`;
+
 const Product = ({ item }) => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Circle />
       <Image src={item.img} />
       <Info>
         <Icon>
-          {" "}
-          <ShoppingCartOutlinedIcon />{" "}
+          <ShoppingCartOutlinedIcon />
+        </Icon>
+        <Icon onClick={() => navigate("/categories")}>
+          <SearchOutlinedIcon />
         </Icon>
         <Icon>
-          {" "}
-          <SearchOutlinedIcon />{" "}
-        </Icon>
-        <Icon>
-          {" "}
-          <FavoriteBorderOutlinedIcon />{" "}
+          <FavoriteBorderOutlinedIcon />
         </Icon>
       </Info>
+      <PriceInfo>
+        <Title>{item.name}</Title>
+        <Price>${item.price}</Price>
+      </PriceInfo>
     </Container>
   );
 };

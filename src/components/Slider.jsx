@@ -4,6 +4,7 @@ import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
 import { sliderItems } from "../data";
 import { useState } from "react";
 import { mobile } from "../responsive";
+import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`
   width: 100%;
@@ -42,7 +43,7 @@ const Wrapper = styled.div`
 
 const Slide = styled.div`
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   align-items: center;
 `;
@@ -50,15 +51,19 @@ const Slide = styled.div`
 const ImgContainer = styled.div`
   flex: 1;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Image = styled.img`
   height: 80%;
+  width: 80%;
 `;
 
 const InfoContainer = styled.div`
   flex: 1;
-  padding: 50px;
+  padding: 70px;
 `;
 
 const Title = styled.h1`
@@ -81,6 +86,8 @@ const Button = styled.button`
 
 const Slider = () => {
   const [slideIndex, setSlideIndex] = useState(0);
+  const navigate = useNavigate();
+
   const handleClick = (direction) => {
     if (direction === "left") {
       setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
@@ -103,7 +110,7 @@ const Slider = () => {
             <InfoContainer>
               <Title>{item.title}</Title>
               <Desc>{item.desc}</Desc>
-              <Button>SHOP NOW</Button>
+              <Button onClick={() => navigate("/productlist")}>SHOP NOW</Button>
             </InfoContainer>
           </Slide>
         ))}

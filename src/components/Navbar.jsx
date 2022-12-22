@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 
 const Container = styled.div`
   height: 60px;
+  background-color: #232f3e;
   ${mobile({ height: "50px" })}
 `;
 
@@ -46,11 +47,13 @@ const Input = styled.input`
 
 const Center = styled.div`
   flex: 1;
-  text-align: center;
+  display: flex;
+  justify-content: center;
 `;
 
 const Logo = styled.h1`
   font-weight: bold;
+  text-decoration: none;
   ${mobile({ fontSize: "24px" })}
 `;
 
@@ -74,37 +77,58 @@ const Navbar = () => {
     <Container>
       <Wrapper>
         <Left>
-          <Language>EN</Language>
+          {/* <Language>EN</Language>
           <SearchContainer>
             <Input />
             <SearchIcon style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
+          </SearchContainer> */}
+          <Logo>
+            <Link to="/" style={{ color: "white", textDecoration: "none" }}>
+              {"< h-aln >"} <span style={{ color: "#CF7808" }}>shop</span>
+            </Link>
+          </Logo>
         </Left>
         <Center>
-          <Logo>
-            <Link to="/">{"< h-aln >"}</Link>
-          </Logo>
+          <MenuItem>
+            <Link
+              to="/categories"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              CATEGORIES
+            </Link>
+          </MenuItem>
+
+          <MenuItem>
+            <Link
+              to="/productlist"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              PRODUCTS
+            </Link>
+          </MenuItem>
         </Center>
         <Right>
           <MenuItem>
-            <Link to="/register">REGISTER</Link>
+            <Link
+              to="/register"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              REGISTER
+            </Link>
           </MenuItem>
           <MenuItem>
-            <Link to="/login">SIGN IN</Link>
-          </MenuItem>
-
-          <MenuItem>
-            <Link to="/categories">CATEGORIES</Link>
-          </MenuItem>
-
-          <MenuItem>
-            <Link to="/productlist">PRODUCTS</Link>
+            <Link
+              to="/login"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              SIGN IN
+            </Link>
           </MenuItem>
 
           <MenuItem>
             <Badge badgeContent={4} color="primary">
-              <Link to="/cart">
-                <ShoppingCartOutlinedIcon />{" "}
+              <Link to="/cart" style={{ color: "white" }}>
+                <ShoppingCartOutlinedIcon />
               </Link>
             </Badge>
           </MenuItem>
