@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Badge from "@mui/material/Badge";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
+import { ProductContext } from "../context/ProductContext";
 
 const Container = styled.div`
   height: 60px;
@@ -73,6 +74,8 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  // const { handleClick } = useContext(ProductContext);
+
   return (
     <Container>
       <Wrapper>

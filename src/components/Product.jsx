@@ -84,7 +84,7 @@ const Price = styled.h2`
   color: #b12704;
 `;
 
-const Product = ({ item }) => {
+const Product = ({ item, handleClick }) => {
   const navigate = useNavigate();
 
   return (
@@ -92,7 +92,7 @@ const Product = ({ item }) => {
       <Circle />
       <Image src={item.img} />
       <Info>
-        <Icon>
+        <Icon onClick={() => navigate("/cart")}>
           <ShoppingCartOutlinedIcon />
         </Icon>
         <Icon onClick={() => navigate("/categories")}>
