@@ -22,17 +22,25 @@ const Wrapper = styled.div`
 const Left = styled.div`
   flex: 1;
   display: flex;
+  justify-content: space-between;
   align-items: center;
 `;
 
-const Language = styled.span`
-  font-size: 14px;
-  color: white;
-  margin-left: 30px;
-
-  cursor: pointer;
-  ${mobile({ display: "none" })}
+const Logo = styled.h1`
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  /* ${mobile({ fontSize: "24px" })} */
 `;
+
+// const Language = styled.span`
+//   font-size: 14px;
+//   color: white;
+//   margin-left: 50px;
+
+//   cursor: pointer;
+//   ${mobile({ display: "none" })}
+// `;
 
 const SearchContainer = styled.div`
   /* border: 1px solid lightgray; */
@@ -51,12 +59,6 @@ const Center = styled.div`
   flex: 1;
   display: flex;
   justify-content: center;
-`;
-
-const Logo = styled.h1`
-  font-weight: bold;
-  text-decoration: none;
-  ${mobile({ fontSize: "24px" })}
 `;
 
 const Right = styled.div`
@@ -84,11 +86,11 @@ const Navbar = () => {
               {"< h-aln >"} <span style={{ color: "#CF7808" }}>shop</span>
             </Link>
           </Logo>
-          <Language>EN</Language>
-          <SearchContainer>
+          {/* <Language>EN</Language> */}
+          {/* <SearchContainer>
             <Input />
             <SearchIcon style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer>
+          </SearchContainer> */}
         </Left>
         <Center>
           <MenuItem>
