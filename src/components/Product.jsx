@@ -84,7 +84,7 @@ const Price = styled.h2`
   color: #b12704;
 `;
 
-const Product = ({ item, handleClick }) => {
+const Product = ({ item }) => {
   const navigate = useNavigate();
 
   return (

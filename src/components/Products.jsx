@@ -1,6 +1,4 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import { ProductContext } from "../context/ProductContext";
 import { popularProducts } from "../data";
 import Product from "./Product";
 
@@ -12,7 +10,6 @@ const Container = styled.div`
 `;
 
 const Products = () => {
-  // const { handleClick } = useContext(ProductContext);
   return (
     <Container>
       {popularProducts.map((item) => (

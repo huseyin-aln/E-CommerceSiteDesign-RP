@@ -1,11 +1,9 @@
-import React, { useContext } from "react";
 import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Badge from "@mui/material/Badge";
 import { mobile } from "../responsive";
 import { Link } from "react-router-dom";
-import { ProductContext } from "../context/ProductContext";
 
 const Container = styled.div`
   height: 60px;
@@ -29,15 +27,18 @@ const Left = styled.div`
 
 const Language = styled.span`
   font-size: 14px;
+  color: white;
+  margin-left: 30px;
+
   cursor: pointer;
   ${mobile({ display: "none" })}
 `;
 
 const SearchContainer = styled.div`
-  border: 1px solid lightgray;
+  /* border: 1px solid lightgray; */
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 10px;
   padding: 5px;
 `;
 
@@ -74,22 +75,20 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
-  // const { handleClick } = useContext(ProductContext);
-
   return (
     <Container>
       <Wrapper>
         <Left>
-          {/* <Language>EN</Language>
-          <SearchContainer>
-            <Input />
-            <SearchIcon style={{ color: "gray", fontSize: 16 }} />
-          </SearchContainer> */}
           <Logo>
             <Link to="/" style={{ color: "white", textDecoration: "none" }}>
               {"< h-aln >"} <span style={{ color: "#CF7808" }}>shop</span>
             </Link>
           </Logo>
+          <Language>EN</Language>
+          <SearchContainer>
+            <Input />
+            <SearchIcon style={{ color: "gray", fontSize: 16 }} />
+          </SearchContainer>
         </Left>
         <Center>
           <MenuItem>
@@ -129,7 +128,7 @@ const Navbar = () => {
           </MenuItem>
 
           <MenuItem>
-            <Badge badgeContent={4} color="primary">
+            <Badge badgeContent={2} color="primary">
               <Link to="/cart" style={{ color: "white" }}>
                 <ShoppingCartOutlinedIcon />
               </Link>
