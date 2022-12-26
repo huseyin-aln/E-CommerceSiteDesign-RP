@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import SearchIcon from "@mui/icons-material/Search";
+// import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Badge from "@mui/material/Badge";
 import { mobile } from "../helpers/responsive";
@@ -42,18 +42,18 @@ const Logo = styled.h1`
 //   ${mobile({ display: "none" })}
 // `;
 
-const SearchContainer = styled.div`
-  /* border: 1px solid lightgray; */
-  display: flex;
-  align-items: center;
-  margin-left: 10px;
-  padding: 5px;
-`;
+// const SearchContainer = styled.div`
+//   /* border: 1px solid lightgray; */
+//   display: flex;
+//   align-items: center;
+//   margin-left: 10px;
+//   padding: 5px;
+// `;
 
-const Input = styled.input`
-  border: none;
-  ${mobile({ width: "50px" })}
-`;
+// const Input = styled.input`
+//   border: none;
+//   ${mobile({ width: "50px" })}
+// `;
 
 const Center = styled.div`
   flex: 1;
