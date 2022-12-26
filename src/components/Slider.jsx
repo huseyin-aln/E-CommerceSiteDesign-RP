@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import ArrowLeftOutlinedIcon from "@mui/icons-material/ArrowLeftOutlined";
 import ArrowRightOutlinedIcon from "@mui/icons-material/ArrowRightOutlined";
-import { sliderItems } from "../data";
+import { sliderItems } from "../helpers/data";
 import { useState } from "react";
-import { mobile } from "../responsive";
+import { mobile } from "../helpers/responsive";
 import { useNavigate } from "react-router-dom";
 
 const Container = styled.div`

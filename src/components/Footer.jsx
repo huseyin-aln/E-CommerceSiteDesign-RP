@@ -5,7 +5,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import RoomIcon from "@mui/icons-material/Room";
 import PhoneIcon from "@mui/icons-material/Phone";
 import MailOutlineOutlinedIcon from "@mui/icons-material/MailOutlineOutlined";
-import { mobile } from "../responsive";
+import { mobile } from "../helpers/responsive";
 
 const Container = styled.div`
   display: flex;

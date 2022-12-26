@@ -2,7 +2,7 @@ import styled from "styled-components";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import Badge from "@mui/material/Badge";
-import { mobile } from "../responsive";
+import { mobile } from "../helpers/responsive";
 import { Link } from "react-router-dom";
 
 const Container = styled.div`

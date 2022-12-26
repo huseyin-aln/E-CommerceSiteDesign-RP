@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
-import { mobile } from "../responsive";
+import { mobile } from "../helpers/responsive";
 
 const Container = styled.div``;
 
